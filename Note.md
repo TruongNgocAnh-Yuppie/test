@@ -12,3 +12,10 @@
 - Nén và giải nén file. -c là nén -x là giải nén.
 - Dùng khi cần chuyển file và thư mục lớn từ server này sang server khác.
 - Tạo backup: Nghiên cứu sau.
+## Build DNS Server
+- https://www.youtube.com/watch?v=Wp7tQxLHM1k
+## Build DHCP Server
+- https://www.youtube.com/watch?v=UEqoAbr-ASw
+- DHCP cấp địa chỉ IP, Subnet Mask, Default Gateway. Giao tiếp qua hai cổng port 67 và 68. Port 67 nghe thông tin từ client và port 68 để reply thông tin. 
+- Ưu điểm: cấu hình IP động cho các máy client theo sắp xếp của người quản trị. Có range sẵn. Linh hoạt trong việc cấp IP. 
+- Nguyên lý hoạt động: Clent gửi bản tin Discorvery đến DHCP Server. DHCP Server gửi lại bản tin Offer. Client nhận được offer sẽ gửi bản tin Request đến DHCP Server. Cuối cùng DHCP sẽ gửi bản tin ACK

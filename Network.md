@@ -11,5 +11,17 @@
 |OSI|TCP/IP|
 |---------|--------|
 |Là mô hình lý thuyết, được sử dụng cho hệ thống máy tính|Là mô hình Server-Client, truyền dữ liệu qua Internet|
+|Mô tả và phân tách rõ ràng chức năng nhiệm vụ của từng tầng|Mô tả cách truyền dữ liệu qua Internet|
 #### TCP/IP
 - Tầng 4: Application Cung cấp cho các ứng dụng những trao đổi dữ liệu chuẩn hóa, giao tiếp dữ liệu giữa 2 máy khác nhau thông qua dịch vụ mạng khác nhau. Giao thức: HTTP, HTTPS, 
+- Tầng 3: Transport Tương tự tầng Transport của mô hình OSI. Giao thức UDP và TCP
+- Tầng 2: Network Xử lý các gói và truyền qua network. Giao thức IP và ICMP 
+- Tầng 1: Physical Truyền dữ liệu giữa hai thiết bị trong cùng một mạng. Giao thức Ethernet (mạng LAN) và ARP. 
+#### TCP/UDP
+|TCP|UDP|
+|------|-----|
+|Giao thức hướng kết nối (cần thiết lập kết nối (bắt tay 3 bước) trước mới có thể truyền)|Giao thức phi kết nối (đẩy gói tin vào đường truyền)|
+|Hỗ trợ cơ chế Full-duplex (truyền và nhận dữ liệu cùng lúc)|Truyền nhanh, hiệu quả với các gói tin yêu cầu thời gian|
+|Cung cấp cơ chế báo nhận (gửi yêu cầu → nhận → báo đã nhận → xác thực → truyền)|Truyền không tin cậy, chỉ truyền và không quan tâm lỗi|
+|Có cơ chế điều khiển luồng thích hợp (flow control) để tránh nghẽn xảy ra||
+|Phục hồi dữ liệu bị mất trên đường truyền||

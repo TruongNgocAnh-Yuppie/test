@@ -23,5 +23,18 @@
 |Giao thức hướng kết nối (cần thiết lập kết nối (bắt tay 3 bước) trước mới có thể truyền)|Giao thức phi kết nối (đẩy gói tin vào đường truyền)|
 |Hỗ trợ cơ chế Full-duplex (truyền và nhận dữ liệu cùng lúc)|Truyền nhanh, hiệu quả với các gói tin yêu cầu thời gian|
 |Cung cấp cơ chế báo nhận (gửi yêu cầu → nhận → báo đã nhận → xác thực → truyền)|Truyền không tin cậy, chỉ truyền và không quan tâm lỗi|
-|Có cơ chế điều khiển luồng thích hợp (flow control) để tránh nghẽn xảy ra||
-|Phục hồi dữ liệu bị mất trên đường truyền||
+|Có cơ chế điều khiển luồng thích hợp (flow control) để tránh nghẽn xảy ra|Truyền liên tục, hỏng thì tiếp tục truyền gói mới|
+|Phục hồi dữ liệu bị mất trên đường truyền|Gói tin bị lỗi thì bỏ qua và tiếp tục truyền gói mới|
+#### Cấu trúc IPv4, IPv6
+- IPv4
+  - Địa chỉ IPv4 gồm 32 bits, được chia đều thành 4 octets
+  - Địa chỉ IPv4 hiện tại đang k đủ cung cấp nhu cầu sử dụng hiện tại nên để giải quyết vấn đề thiếu hụt thì ta dùng đến các kĩ thuật: NAT, subnetting, IPv6, ...
+  - Có 2 loại địa chỉ IPv4 là: Public (dùng cho host trên Internet) và Private (dùng cho host trong LAN) 
+  - Broadcast Address là địa chỉ có các bit trong dải bằng 1, đại diện cho tất cả các thiết bị kết nối cùng mạng. Khi một gói tin được gửi đến địa chỉ broadcast, toàn bộ các thiết bị đều nhận được.
+  - Default Gateway được sử dụng cho mục đích: Nếu không tồn tại đường gửi đến địa chỉ nào đó trong routing table thì gửi gói tin đó qua gateway. Nhiệm vụ của gateway thường là gửi gói tin đó đến nơi cần đến. 
+- IPv6
+  - Gồm 128 bits. Gấp 4 lần địa chỉ IPv4
+  - Loại bỏ công nghệ NAT. Có khả năng tự động cấu hình không dùng DHCP Server. 
+## Switching 
+#### VLAN
+

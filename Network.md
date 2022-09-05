@@ -49,3 +49,5 @@
 - Công nghệ EtherChannel giúp gộp nhiều interface vật lý thành một kênh logic để tăng băng thông trên đường dẫn point-to-point. 
 - Cấu hình bonding là từ 2 hoặc nhiều interface kết hợp lại thành 1 interface ảo. Điều này tăng tính dự phòng, cân bằng tải. Khi 1 card mạng vật lý có sự cố thì với cơ chế bonding sẽ tự độg chuyển sang card còn lại để hoạt động.
 ## Routing
+- 2 loại cơ bản: Định tuyến tĩnh, định tuyến động. 
+  - Trong định tuyến động gồm giao thức EGP, BGP dùng định tuyến biên. IGP, RIP, OSPF, EIGRP định tuyến nội miề. 

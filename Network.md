@@ -37,4 +37,11 @@
   - Loại bỏ công nghệ NAT. Có khả năng tự động cấu hình không dùng DHCP Server. 
 ## Switching 
 #### VLAN
+- Các mạng lớn hiện nay đều triển khai mạng mạng cục bộ ảo (VLANs). Nếu không có VLANs, Switch sẽ coi các port đều ở trong cùng một miền quảng bá. Port của Switch sẽ được chia làm các nhóm trong các VLANs khác nhau (chia đoạn miền quảng bá)
+- Switch ban đầu mặc định có 1 VLAN, tuy nhiên có thể tự cấu hình thành nhiều VLAN khác nhau. Điều này sẽ tạo ra nhiều miền quảng bá bằng cách đặt nhiều giao diện vào 1 VLAN.
+  - Nhóm các người dùng lại thành 1 cụm mà không cần chia theo vị trí địa lý.
+  - Tăng cường bảo mật bằng cách tách riêng dữ liệu thành một VLAN riêng biệt
+- Khi một liên kết giữa hai switch hoặc giữa một router và một switch truyền tải lưu lượng của nhiều VLAN thì cổng đó gọi là cổng `trunk`
+- Các thành viên trong cùng VLAN ở các switch khác nhau vẫn có thể giao tiếp với nhau. 
 
+![4](/Linux-Basic/image/2021-04-01_16-41-45.png)

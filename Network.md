@@ -44,3 +44,8 @@
 - Khi một liên kết giữa hai switch hoặc giữa một router và một switch truyền tải lưu lượng của nhiều VLAN thì cổng đó gọi là cổng `trunk`
 - Các thành viên trong cùng VLAN ở các switch khác nhau vẫn có thể giao tiếp với nhau. 
 ![1](/../../../Network-CCNA/blob/main/image/2021-04-01_16-41-45.png)
+- Routing giữa các VLAN thì ta dùng InterVLAN - các thiết bị ở các VLAN khác nhau có thể giao tiếp được với nhau. Chỉ áp dụng được trong mô hình có thiết bị ở Layer3.
+#### Etherchannel, bonding
+- Công nghệ EtherChannel giúp gộp nhiều interface vật lý thành một kênh logic để tăng băng thông trên đường dẫn point-to-point. 
+- Cấu hình bonding là từ 2 hoặc nhiều interface kết hợp lại thành 1 interface ảo. Điều này tăng tính dự phòng, cân bằng tải. Khi 1 card mạng vật lý có sự cố thì với cơ chế bonding sẽ tự độg chuyển sang card còn lại để hoạt động.
+## Routing

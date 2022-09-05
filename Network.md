@@ -44,4 +44,4 @@
 - Khi một liên kết giữa hai switch hoặc giữa một router và một switch truyền tải lưu lượng của nhiều VLAN thì cổng đó gọi là cổng `trunk`
 - Các thành viên trong cùng VLAN ở các switch khác nhau vẫn có thể giao tiếp với nhau. 
 
-![4](/../Linux-Basic/image/2021-04-01_16-41-45.png)
+![4](/../../Linux-Basic/image/2021-04-01_16-41-45.png)

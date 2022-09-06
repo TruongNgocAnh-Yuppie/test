@@ -61,4 +61,13 @@
 - Nhược điểm 
   - Không tối ưu trong mô hình mạng lớn
   - Mô hình mạng chưa cố định, có nhu cầu mở rộng và thay đổi.
-- Default Route: Định tuyến đến mọi máy qua cổng kết nối.
+- Default Route: Định tuyến đến mọi máy qua cổng kết nối. Dùng làm điểm truy cập cho các kết nối ra bên ngoài tới các mạng khác, cho phép một máy tính giao tiếp với một máy tính khác trên một mạng khác. 
+  - Hai địa chỉ có cùng NetID có thể gửi thông tin trực tiếp cho nhau. 192.168.1.2 và 192.168.1.3 cùng 192.168.1.0 trong cùng một mạng. 
+  - Trường hợp hai địa chỉ IP có NetID khác nhau, ví dụ như 192.168.1.2 có NetID là 192.168.1.0, còn 172.16.4.2 có NetID là 172.16.0.0, muốn gửi thông tin cho nhau thì phải đi qua thiết bị Router, bằng cách gửi ra một cổng thoát mặt định, Default Gateway là địa chỉ IP của Router đó.
+  - Các cổng mặc định Default Gateway là các hệ thống định tuyến được giao nhiệm vụ đảm bảo yêu cầu được gửi đến đúng đích, ngay cả khi người gửi và người nhận sử dụng các giao thức mạng khác nhau.
+#### Cấu hình IP 
+- Cấu hình file /etc/netplan/01-network-manager-all.yaml và dùng lệnh `sudo netplan apply`
+## NAT
+- NAT cho phép mạng bên trong hợp pháp hóa địa chỉ IPv4 khi truy cập mạng. Người quản trị mạng chỉ cần 1 hoặc vài địa chỉ IPv4 cho Router để cấp cho các host.
+- NAT chuyển đổi địa chỉ IPv4 bằng cách cho phép mạng đùng địa chỉ IPv4 private. NAT còn cho phép ẩn địa chi IPv4 với mạng bên ngoài
+![2](/../../../Network-CCNA/blob/main/image/2021-04-16_15-41-57.png)

@@ -50,4 +50,15 @@
 - Cấu hình bonding là từ 2 hoặc nhiều interface kết hợp lại thành 1 interface ảo. Điều này tăng tính dự phòng, cân bằng tải. Khi 1 card mạng vật lý có sự cố thì với cơ chế bonding sẽ tự độg chuyển sang card còn lại để hoạt động.
 ## Routing
 - 2 loại cơ bản: Định tuyến tĩnh, định tuyến động. 
-  - Trong định tuyến động gồm giao thức EGP, BGP dùng định tuyến biên. IGP, RIP, OSPF, EIGRP định tuyến nội miề. 
+  - Trong định tuyến động gồm giao thức EGP, BGP dùng định tuyến biên. IGP, RIP, OSPF, EIGRP định tuyến nội miền. 
+#### Định tuyến tĩnh
+- Dùng để đẩy lưu lượng theo một đường cụ thể. Người quản trị cấu hình định tuyến tĩnh cố định và luôn phải giám sát duy trì đảm bảo kết nối.
+- Được sử dụng trong một số trường hợp sau
+  - Một mạng nhỏ cần định tuyến đơn giản
+  - Topo mạng hub-and-spoke (từ một nút mạng trung gian chuyển đến các nút lân cận) - kết nối tập trung
+  - Khi muốn tạo một định tuyến nhanh chóng
+  - Như 1 định tuyến dự phòng
+- Nhược điểm 
+  - Không tối ưu trong mô hình mạng lớn
+  - Mô hình mạng chưa cố định, có nhu cầu mở rộng và thay đổi.
+- Default Route: Định tuyến đến mọi máy qua cổng kết nối.
